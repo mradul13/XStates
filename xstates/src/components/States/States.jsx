@@ -1,4 +1,3 @@
-// src/LocationSelector.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -49,10 +48,10 @@ const States = () => {
 
   return (
     <div>
-      <h2>Location Selector</h2>
+      <h2>Select Location</h2>
       <div>
-        <label>Select Country: </label>
-        <select value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)}>
+        {/* <label>Select Country: </label> */}
+        <select  value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)}>
           <option value="">Select Country</option>
           {countries.map(country => (
             <option key={country} value={country}>{country}</option>
@@ -60,7 +59,7 @@ const States = () => {
         </select>
       </div>
       <div>
-        <label>Select State: </label>
+        {/* <label>Select State: </label> */}
         <select
           value={selectedState}
           onChange={(e) => setSelectedState(e.target.value)}
@@ -73,7 +72,7 @@ const States = () => {
         </select>
       </div>
       <div>
-        <label>Select City: </label>
+        {/* <label>Select City: </label> */}
         <select
           value={selectedCity}
           onChange={handleCityChange}
